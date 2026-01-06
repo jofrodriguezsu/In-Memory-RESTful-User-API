@@ -25,27 +25,6 @@ My goal in this project is to demonstrate how a backend API works internally: ro
 
 ---
 
-## 📂 Project Structure
-
-Src/
-│
-├── Config/
-│ └── connectionDB.js # In-memory user data
-│
-├── Controller/
-│ └── userController.js # Business logic for each route
-│
-├── Middleware/
-│ └── errorMiddleware.js # Centralized error handling
-│
-├── Routes/
-│ └── routes.js # API endpoints
-│
-App.js # Express app configuration
-Server.js # Server entry point
-
----
-
 ## 📌 User Data Structure
 
 Each user contains:
