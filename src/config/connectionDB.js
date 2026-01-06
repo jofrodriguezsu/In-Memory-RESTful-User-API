@@ -1,20 +1,19 @@
 const users = [
   {
     id: 1,
-    username: "Andres",
+    name: "Andres",
     age: 19
   },
   {
     id: 2,
-    username: "Carlos",
+    name: "Carlos",
     age: 21
   },
   {
     id: 3,
-    username: "Sebastian",
+    name: "Sebastian",
     age: 17
   },
 ]
-
 
 module.exports = users

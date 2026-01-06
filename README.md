@@ -1,18 +1,19 @@
-# 👤 In-Memory Users CRUD API
+# In-Memory CRUD API with Node.js & Express
 
-This project is a simple **CRUD REST API** built with **Node.js and Express**, using an **in-memory data store** instead of a database.
+This is a simple REST API built with **Node.js and Express** that performs basic **CRUD operations** (Create, Read, Update, Delete) using an **in-memory data structure** instead of a database.
 
-It was created to practice the basics of REST APIs, routing, controllers, and request handling in Express without the complexity of a real database.
+My goal in this project is to demonstrate how a backend API works internally: routing, controllers, middleware, error handling, and clean project structure.
 
 ---
 
 ## 🚀 Features
 
-- Full CRUD operations for users
+- Full CRUD operations on users
 - In-memory data storage (no database required)
-- RESTful routes with Express
-- Simple and clear project structure
-- JSON request and response handling
+- Centralized error handling middleware
+- Clean MVC-like structure (Routes, Controllers, Middleware)
+- JSON request/response handling
+- Environment variable support with `dotenv`
 
 ---
 
@@ -20,18 +21,28 @@ It was created to practice the basics of REST APIs, routing, controllers, and re
 
 - Node.js
 - Express.js
+- dotenv
 
 ---
 
 ## 📂 Project Structure
 
-├── config
-│ └── connectionDB.js
-├── controller
-│ └── userController.js
-├── routes
-│ └── routes.js
-├── server.js
+Src/
+│
+├── Config/
+│ └── connectionDB.js # In-memory user data
+│
+├── Controller/
+│ └── userController.js # Business logic for each route
+│
+├── Middleware/
+│ └── errorMiddleware.js # Centralized error handling
+│
+├── Routes/
+│ └── routes.js # API endpoints
+│
+App.js # Express app configuration
+Server.js # Server entry point
 
 ---
 
@@ -40,7 +51,7 @@ It was created to practice the basics of REST APIs, routing, controllers, and re
 Each user contains:
 
 - **id** (Number or String)
-- **username** (String)
+- **name** (String)
 - **age** (Number)
 
 All data is stored in memory, meaning it resets when the server restarts.
@@ -51,9 +62,9 @@ All data is stored in memory, meaning it resets when the server restarts.
 
 Base route:
 
-- `GET /users` → Get all users  
-- `GET /users/:id` → Get a user by ID  
-- `POST /users` → Create a new user  
-- `PUT /users/:id` → Update a user  
-- `DELETE /users/:id` → Delete a user  
+- `GET /api/users` → Get all users  
+- `GET /api/users/:id` → Get a user by ID  
+- `POST /api/users` → Create a new user  
+- `PUT /api/users/:id` → Update a user  
+- `DELETE /api/users/:id` → Delete a user  
 

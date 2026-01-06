@@ -1,6 +1,6 @@
 const express = require("express")
 const router = express.Router()
-const {getAll, getOne, postUser, putUser, deleteUser} = require("../controller/userController.js")
+const {getAll, postUser, putUser, deleteUser, getOne} = require("../controller/userController.js")
 
 
 router.get("/", getAll)
@@ -15,3 +15,4 @@ router.delete("/:id", deleteUser)
 
 
 module.exports = router
+
